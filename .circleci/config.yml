@@ -12,7 +12,7 @@ jobs:
       - image: "circleci/python:3.6.4"
     steps:
       - checkout:
-          path: ~/repo/SecondProject
+          path: git://SecondProject
       - run: python3 Second.py
 # Orchestrate our job run sequence
 workflows:
