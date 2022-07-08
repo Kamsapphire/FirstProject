@@ -7,12 +7,12 @@ jobs:
       - checkout
       - run: python3 First.py
   test:
-    working_directory: ~/repo/secondProject-1
+    working_directory: ~/repo/SecondProject
     docker:
       - image: "circleci/python:3.6.4"
     steps:
       - checkout 
-      - run: python3 Test.py
+      - run: python3 Second.py
 # Orchestrate our job run sequence
 workflows:
   build_and_test:
