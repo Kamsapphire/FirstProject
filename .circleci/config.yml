@@ -12,7 +12,7 @@ jobs:
       - image: "circleci/python:3.6.4"
     steps:
       - checkout:
-          path: https://github.com/Kamsapphire/secondProject-1.git
+          path: ~/repo/secondProject-1
       - run: python3 Test.py
 # Orchestrate our job run sequence
 workflows:
