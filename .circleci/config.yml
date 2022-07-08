@@ -12,8 +12,8 @@ jobs:
       - image: "circleci/python:3.6.4"
     steps:
       - checkout:
-          path: ~/repo/secondProject-1
-      - run: python3 ./Test.py
+          path: git://secondProject-1
+      - run: python3 Test.py
 # Orchestrate our job run sequence
 workflows:
   build_and_test:
