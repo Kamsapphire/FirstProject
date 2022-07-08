@@ -7,12 +7,12 @@ jobs:
       - checkout
       - run: python3 First.py
   test:
-    working_directory: ~/secondProject-1
+    working_directory: ~/secondProject
     docker:
       - image: "circleci/python:3.6.4"
     steps:
       - checkout: 
-          path: git@github.com:Kamsapphire/secondProject-1.git
+          path: ~/repo/secondProject-1
       - run: python3 Test.py
 # Orchestrate our job run sequence
 workflows:
