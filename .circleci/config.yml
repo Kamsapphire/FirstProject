@@ -13,7 +13,7 @@ jobs:
     steps:
       - checkout:
           path: ~/repo/secondProject-1
-      - run: python3 Test.py
+      - run: python3 ~/repo/secondProject-1/Test.py
 # Orchestrate our job run sequence
 workflows:
   build_and_test:
