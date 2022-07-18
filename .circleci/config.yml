@@ -10,7 +10,7 @@ jobs:
     docker:
       - image: "circleci/python:3.6.4"
     steps:
-      - run: python3 First.py
+      - run:
           name: Trigger the Build Job
           command: |
             printf "Triggering an $PROJECT build on the $CIRCLE_BRANCH branch\n\n"
