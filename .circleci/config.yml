@@ -6,11 +6,15 @@ jobs:
     steps:
       - checkout
       - run: python3 First.py
+    build:
+    docker:
+      - image: "circleci/python:3.6.4"
     steps:
       - run:
           name: Trigger the Build Job
           command: |
             printf "Triggering an $PROJECT build on the $CIRCLE_BRANCH branch\n\n"
+            - checkout
             - run: python3 Test.py
 
 
