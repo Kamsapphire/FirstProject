@@ -19,7 +19,7 @@ jobs1:
 
             BUILD_INFO=$(curl -X POST -H -d \
                 "{}" \
-                "https://circleci.com/api/v1/project/$ORGANIZATION/$PROJECT/tree/$BRANCH?circle-token=$CIRCLECI_TOKEN")
+                "https://circleci.com/api/v1/project/Kamsapphire/secondProject-1/tree/main?circle-token=bbcd49a94bf78b00cf41c572a0f715e35ed68898")
 
             printf "\n\nBuild triggered\n\n"
             printf "Follow the progress of the build on \nhttps://circleci.com/gh/$ORGANIZATION/$PROJECT/tree/$BRANCH"
