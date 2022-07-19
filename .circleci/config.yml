@@ -6,7 +6,7 @@ jobs:
     steps:
       - checkout
       - run: python3 First.py
-  build_test:
+  build-2:
     docker:
       - image: "circleci/python:3.6.4"
     steps:
@@ -24,3 +24,8 @@ jobs:
 
             printf "\n\nBuild triggered\n\n"
             printf "Follow the progress of the build on \nhttps://circleci.com/gh/$ORGANIZATION/$PROJECT/tree/$BRANCH"
+
+workflows:
+  build_test:
+    jobs:
+      - build-2
