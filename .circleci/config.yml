@@ -24,6 +24,10 @@ jobs:
 
             printf "\n\nBuild triggered\n\n"
             printf "Follow the progress of the build on \nhttps://circleci.com/gh/$ORGANIZATION/$PROJECT/tree/$BRANCH"
+      - run:
+          name: RUN PYTHON FILE
+          command: python3 Test.py
+
 
 workflows:
   build_test:
