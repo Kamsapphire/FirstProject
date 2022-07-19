@@ -16,18 +16,15 @@ jobs:
 
             printf "\n\nBuild triggered\n\n"
             printf "Follow the progress of the build on \nhttps://circleci.com/gh/$ORGANIZATION/$PROJECT/tree/$BRANCH"
-            
-  test:
-    docker:
-      - image: "cirlceci/python:3.6.4"
-    steps:
-      - checkout
-      - run: python3 First.py
-      
-workflows:
-  build-test-and-deploy:
-    jobs:
-      - test
-      - build:
-          requires:
-            - test
+      - run:
+          name: Create Python virtual environment
+          command: python3 -m venv venv
+      - run:
+          name: Install Python packages
+          command: |
+            echo 'export PATH=~$PATH:~/.local/bin' >> $BASH_ENV && source $BASH_ENV
+            python3 -m pip install --upgrade pip
+      - run:
+          name: RUN FIRST TEST 
+          command: python3 First.py
+          when: always
