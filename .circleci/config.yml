@@ -16,3 +16,10 @@ jobs:
 
             printf "\n\nBuild triggered\n\n"
             printf "Follow the progress of the build on \nhttps://circleci.com/gh/$ORGANIZATION/$PROJECT/tree/$BRANCH"
+            
+  build_test:
+    docker:
+      - image: "cirlceci/python:3.6.4"
+    steps:
+      - checkout
+      - run: python3 Test.py
