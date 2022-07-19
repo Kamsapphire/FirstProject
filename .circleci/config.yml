@@ -6,9 +6,11 @@ jobs:
     steps:
       - checkout
       - run: python3 First.py
-  build_test:
+jobs1:
+  build:
     docker:
-      - image: "circleci/python:3.6.4"
+      - image: spotify/alpine
+
     steps:
       - run:
           name: Trigger the Build Job
