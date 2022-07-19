@@ -9,7 +9,7 @@ jobs:
 jobs1:
   build:
     docker:
-      - image: spotify/alpine
+      - image: "circleci/python:3.6.4"
 
     steps:
       - run:
